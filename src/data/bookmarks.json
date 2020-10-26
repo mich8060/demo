@@ -1,0 +1,103 @@
+[
+    {
+        "type":"course",
+        "title":"Node.js Getting Started",
+        "image":"https://pluralsight.imgix.net/course-images/nodejs-getting-started-v1.png?w=192&h=114&auto=compress,format",
+        "metadata1":["Course","Intermediate","Megan Young","Aug 19, 2020"],
+        "metadata2": [{
+            "label":"Related Path",
+            "type":"path",
+            "children":["Node.js"]
+        }]
+    },{
+        "type":"course",
+        "title":"Node.js The Big Picture",
+        "image":"https://pluralsight.imgix.net/course-images/nodejs-big-picture-v1.png?w=192&h=114&auto=compress,format",
+        "metadata1":["Course","Intermediate","Megan Young","Aug 19, 2020"],
+        "metadata2": [{
+            "label":"Related Path",
+            "type":"path",
+            "children":["Node.js","Working with Node.js"]
+        }]
+    },{
+        "type":"course",
+        "title":"Advanced SVG Animation",
+        "image":"https://pluralsight.imgix.net/course-images/audience/software-development.jpg?w=192&h=114&auto=compress,format",
+        "metadata1":["Course","Intermediate","Sarah Drasner","Mar 25, 2018"],
+        "metadata2":[]
+    },{
+        "type":"path",
+        "title":"Node.js",
+        "image":"https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png?w=192&h=114&auto=compress,format&bg=1E2429&fit=fill",
+        "metadata1":["Path","All Levels","Aug 19, 2020"],
+        "metadata2":[]
+    },{
+        "type":"lab",
+        "title":"AWS Key Management Service Basics",
+        "image":"https://pluralsight2.imgix.net/paths/images/aws-certified-devops-engineer-25d912e3da.png?w=192&h=114&auto=compress,format&bg=1E2429&fit=fill",
+        "metadata1":["Lab","Beginner","Sarah Holderness","Aug 19, 2020"],
+        "metadata2": []
+    },{
+        "type":"guide",
+        "title":"Visual Studio Code for Node.js",
+        "image":"http://localhost:3000/guides.jpg",
+        "metadata1":["Guide","Douglas Starnes","Aug 19, 2020"],
+        "metadata2":[]
+    },{
+        "type":"module",
+        "title":"Prerequisite Knowledge before Studying the Color Wheel",
+        "image":"https://pluralsight.imgix.net/course-images/color-theory-fundamentals-v1.png?w=192&h=114&auto=compress,format&bg=1E2429&fit=fill",
+        "metadata1":["Module","Beginner","Megan Yout","Aug 19,2020"],
+        "metadata2":[{
+            "label":"Course",
+            "type":"course",
+            "children":["Color Theory Fundamentals"]
+        }]
+    },{
+        "type":"clip",
+        "title":"Course Overview",
+        "image":"https://pluralsight.imgix.net/course-images/color-theory-fundamentals-v1.png?w=192&h=114&auto=compress,format&bg=1E2429&fit=fill",
+        "metadata1":["Clip","Beginner","Megan Yout","Aug 19,2020"],
+        "metadata2":[{
+            "label":"Course",
+            "type":"course",
+            "children":["Color Theory Fundamentals"]
+        }]
+    },{
+        "type":"project",
+        "title":"React State: Creating a Matching Game",
+        "image":"https://pluralsight2.imgix.net/projects/assets/projects-card-react.png?w=192&h=114&auto=compress,format&bg=1E2429&fit=fill",
+        "metadata1":["Project","Advanced","Auggie Hudak","Aug 19,2020"],
+        "metadata2":[]
+    },{
+        "type":"interactive",
+        "title":"CSS: Using Flexbox for Layout",
+        "image":"https://pluralsight2.imgix.net/ics/pollack_souza_2012b_node/assets/thumbnail-4c11922d7fc171422eedf021ec63cf48.png?w=192&h=114&auto=compress,format&bg=1E2429&fit=fill",
+        "metadata1":["Interactive","Beginner","Dan Denney","Aug 19, 2020"],
+        "metadata2":[]
+    },{
+        "type":"interactive",
+        "title":"Node.js: Using Modules and npm",
+        "image":"https://pluralsight2.imgix.net/ics/pollack_souza_2012b_node/assets/thumbnail-4c11922d7fc171422eedf021ec63cf48.png?w=192&h=114&auto=compress,format&bg=1E2429&fit=fill",
+        "metadata1":["Interactive","Beginner","Gregg Pollack, Carlos Souza","Aug 19, 2020"],
+        "metadata2":[]
+    },{
+        "type":"interactive",
+        "title":"Node.js: Introduction to Using Express.js",
+        "image":"https://pluralsight2.imgix.net/ics/pollack_souza_2012b_node/assets/thumbnail-4c11922d7fc171422eedf021ec63cf48.png?w=192&h=114&auto=compress,format&bg=1E2429&fit=fill",
+        "metadata1":["Interactive","Beginner","Gregg Pollack, Carlos Souza","Aug 19, 2020"],
+        "metadata2":[]
+    },{
+        "type":"skilliq",
+        "title":"JavaScript",
+        "image":"https://pluralsight.imgix.net/paths/path-icons/javascript-36f5949a45.png?w=192&h=114&auto=compress,format&bg=1E2429&fit=fill",
+        "metadata1":["Skill IQ","Aug 19,2020"],
+        "metadata2":[]
+    },{
+        "type":"skilliq",
+        "title":"Node.js",
+        "image":"https://pluralsight2.imgix.net/paths/images/nodejs-45adbe594d.png?w=192&h=114&auto=compress,format&bg=1E2429&fit=fill",
+        "metadata1":["Skill IQ","Aug 19,2020"],
+        "metadata2":[]
+    }
+]

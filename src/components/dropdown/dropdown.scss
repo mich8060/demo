@@ -1,0 +1,37 @@
+@import "~@pluralsight/ps-design-system-core/dist/index.module.scss";
+
+.dropdown {
+    background:#34383F;
+    border:solid 1px #34383F;;
+    border-radius:2px;
+    color:$ps-colors-text-icon-high-on-dark;
+    cursor: pointer;
+    display:inline-flex;
+    font-weight:600;
+    margin-right:12px;
+    min-width:180px;
+    padding:7px 4px 6px 8px;
+    position: relative;
+    z-index:99;
+
+    &--action {
+        border-top:solid 1px $ps-colors-border-high-on-light;
+        margin-top:12px;
+        padding-top:24px;
+    }
+
+    &--arrow {
+        margin-left:auto;
+    }
+
+    &--menu {
+        background:#fff;
+        border-radius:2px;
+        color:$ps-colors-text-icon-high-on-light;
+        left:0;
+        min-width:260px;
+        padding:12px;
+        position:absolute;
+        top:40px;
+    }
+}

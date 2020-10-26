@@ -1,0 +1,51 @@
+@import "~@pluralsight/ps-design-system-normalize/dist/index.css";
+@import "~@pluralsight/ps-design-system-core/dist/index.module.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+html,
+body {
+	background:$ps-colors-background-dark1;
+	color:$ps-colors-text-icon-high-on-dark;
+	font-family: 'Montserrat','Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+	overscroll-behavior: none;
+}
+
+*{
+	box-sizing: border-box;
+	-webkit-overflow-scrolling: touch;
+}
+
+img {
+	display:block;
+	width:100%;
+}
+
+svg {
+	fill: currentcolor;
+	margin:0;
+}
+
+button, input, textarea {
+	font-family: inherit;
+}
+
+a {
+	align-items: center;
+	display:inline-flex;
+	text-decoration: none;
+}
+
+.app {
+    min-width:1600px;
+    padding-top:60px;
+	
+	&--header {
+		left:0;
+        min-width:1600px;
+		position:fixed;
+		right:0;
+		top:0;
+		z-index: 999;
+	}
+	
+}

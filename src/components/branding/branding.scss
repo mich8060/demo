@@ -1,0 +1,13 @@
+.branding {
+    align-items: center;
+    display:flex;
+
+    &--mark {
+        width:24px;
+    }
+
+    &--text {
+        height:24px;
+        width:82px;
+    }
+}

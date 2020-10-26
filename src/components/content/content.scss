@@ -1,0 +1,49 @@
+@import "~@pluralsight/ps-design-system-core/dist/index.module.scss";
+
+.content {
+    &--container {
+        margin:0 auto;
+        max-width:1600px;
+        padding:24px 48px;
+    }
+
+    &--item {
+        strong {
+            color:$ps-colors-text-icon-high-on-dark;
+            font-weight:600;
+            margin-right:4px;
+        }
+    }
+
+    &--type {
+        height:12px;
+        margin-right:4px;
+        position: relative;
+        top:3px;
+
+        &.custom {
+            height:3px;
+            top:7px;
+        }
+    }
+}
+
+.filter {
+    color:$ps-colors-text-icon-low-on-dark;
+    font-weight:600;
+    padding:8px 0;
+    margin-bottom:16px;
+
+    &--dropdown {
+        width:180px;
+        margin-right:12px;
+
+        span {
+            font-weight:600;
+        }
+    }
+
+    &--label {
+        margin-right:12px;
+    }
+}

@@ -1,0 +1,33 @@
+.checkbox {
+    align-items: center;
+    display:flex;
+    font-weight:600;
+    padding:4px 0;
+
+    &--box {
+        display:none; 
+        
+        &:checked {
+            & + .checkbox--custom {
+                background:rgb(0, 132, 189);
+                border: 2px solid rgb(0, 132, 189);
+            }
+        }
+    }
+
+    &--custom {
+        align-items: center;
+        border-radius: 2px;
+        border: 2px solid rgba(0, 0, 0, 0.55);
+        background: rgb(255, 255, 255);
+        display:flex;
+        height: 16px;
+        margin-right:8px;
+        width: 16px;
+
+        svg {
+            width:16px;
+            height:16px;
+        }
+    }
+}
