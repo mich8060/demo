@@ -1,89 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './content.scss'
 
 import Row from '@pluralsight/ps-design-system-row'
 import Button from '@pluralsight/ps-design-system-button'
 import Icon from '@pluralsight/ps-design-system-icon'
 import { IqIcon, BookmarkFillIcon, LabsIcon, InteractiveIcon, MoreIcon, PathIcon, VideoIcon, ProjectIcon,  } from '@pluralsight/ps-design-system-icon'
-import Data from '../../data/bookmarks.json'
+
 import Dropdown from '../dropdown/'
 import DSDropdown from '@pluralsight/ps-design-system-dropdown'
 import Theme from '@pluralsight/ps-design-system-theme'
 
-function Content(){
+function Content(props){
+    const [render, setRender] = useState(false)
     return(
         <div className="content">
             <div className="content--container">
-                <div className="content--filter">
-                    <div className="filter">
-                        <span className="filter--label">Filter by:</span>
-                        <Dropdown 
-                            label="Content type"
-                            options = {[
-                                { name: 'clips', label: 'Clips' },
-                                { name: 'conferences', label: 'Conferences' },
-                                { name: 'courses', label: 'Courses'},
-                                { name: 'guides', label: 'Guides' },
-                                { name: 'interactive', label: 'Interactive Courses' },
-                                { name: 'labs', label: 'Labs' },
-                                { name: 'modules', label: 'Modules' },
-                                { name: 'paths', label: 'Paths' },
-                                { name: 'projects', label: 'Projects' },
-                                { name: 'iq', label: 'Skill IQ' }
-                            ]}
-                        />
-                        <Theme name={Theme.names.dark}>
-                            <DSDropdown 
-                                className="filter--dropdown"
-                                placeholder="Skill level"
-                                appearance={DSDropdown.appearances.subtle}
-                                menu={
-                                    <React.Fragment>
-                                        <DSDropdown.Item>All</DSDropdown.Item>
-                                        <DSDropdown.Item>Beginner</DSDropdown.Item>
-                                        <DSDropdown.Item>Intermediate</DSDropdown.Item>
-                                        <DSDropdown.Item>Advanced</DSDropdown.Item>
-                                    </React.Fragment>
-                                }
-                            />
-                            <DSDropdown 
-                                className="filter--dropdown"
-                                placeholder="Date range"
-                                appearance={DSDropdown.appearances.subtle}
-                                menu={
-                                    <React.Fragment>
-                                        <DSDropdown.Item>All time</DSDropdown.Item>
-                                        <DSDropdown.Item>Past 6 months</DSDropdown.Item>
-                                        <DSDropdown.Item>Past year</DSDropdown.Item>
-                                        <DSDropdown.Item>Past 2 years</DSDropdown.Item>
-                                    </React.Fragment>
-                                }
-                            />
-                        </Theme>
-                        <span className="filter--label">Sort by:</span>
-                        <Theme name={Theme.names.dark}>
-                        <DSDropdown 
-                            className="filter--dropdown"
-                            placeholder="Relevance"
-                            appearance={DSDropdown.appearances.subtle}
-                            menu={
-                                <React.Fragment>
-                                    <DSDropdown.Item>Relevance</DSDropdown.Item>
-                                    <DSDropdown.Item>Newest</DSDropdown.Item>
-                                </React.Fragment>
-                            }
-                        />
-                        </Theme>
-                    </div>
-                </div>
-                {Data.map((item, index) =>{ 
+                {props.data.map((item, index) =>{
+                    
+                    let { iconProps, customIcon } = {}
 
-                    let iconProps = {
+                    iconProps = {
                         className: 'content--type',
                         size: VideoIcon.sizes.small
                     }
                     
-                    let customIcon = (function(symbol){
+                    customIcon = (function(symbol){
                         switch(symbol){
                             case 'path':
                                 return <PathIcon { ...iconProps } />
@@ -107,13 +48,14 @@ function Content(){
                         }
                     })(item.type)
 
-                    let customRow =   <Row.Text>
-                                    {customIcon}
-                                    {item.metadata1[0]}
-                                </Row.Text>
+                    let customMeta = item.metadata1
 
-                    item.metadata1.shift()
-                    item.metadata1.unshift(customRow)
+                    if(!render){
+                        let customRow = <Row.Text> {customIcon} {item.metadata1[0]} </Row.Text>
+                        customMeta.shift()
+                        customMeta.unshift(customRow)
+                        setRender(true)
+                    }
 
                     let rowProps = {
                         actionBar:[
@@ -125,7 +67,7 @@ function Content(){
                         image: <Row.Image src={item.image} />,
                         key: index,
                         title: item.title,
-                        metadata1: item.metadata1,
+                        metadata1: customMeta,
                         progress: 0
                     }
 

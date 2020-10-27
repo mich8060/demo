@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState} from 'react'
-import './dropdown.scss'
+import './dialog.scss'
 
 import { CaretDownIcon  } from '@pluralsight/ps-design-system-icon'
 import Button from '@pluralsight/ps-design-system-button'
 import Theme from '@pluralsight/ps-design-system-theme'
 
-import Checkbox from '../checkbox/'
+import Checkbox from '../checkbox'
 
-function Dropdown(props){
+function Dialog(props){
 
     const ref = useRef()
-    const [active, setActive] = useState(false)
+    const [active, setActive] = useState(true)
 
     useOutsideClick(ref, () => {
         if(active) setActive(false)
@@ -18,24 +18,29 @@ function Dropdown(props){
     
     return(
         <div 
-            className="dropdown"
+            className="dialog"
             onClick={() => { setActive(true) }}
             ref={ref}
         >
-            {props.label}
-            <CaretDownIcon color={CaretDownIcon.colors.textIconLowOnDark} className="dropdown--arrow" />
+            Content type
+            <CaretDownIcon color={CaretDownIcon.colors.textIconLowOnDark} className="dialog--arrow" />
             {active && (
                 <Theme name={Theme.names.light}>
-                    <div className="dropdown--menu">
-                        {props.options.map((item,index) => (
-                            <Checkbox 
-                                name={item.name}
-                                value={item.name}
-                                label={item.label} 
-                                key={index} 
-                            />
-                        ))}
-                        <div className="dropdown--action">
+                    <div className="dialog--menu">
+                        {props.data.map((item,index) => {
+                            if(item === "skilliq"){
+                                item = "Skill IQ"
+                            }else if(item === "interactive"){
+                                item = "Interactive Courses"
+                            }
+                            return(
+                                <div className="dialog--item">
+                                    <input type="checkbox" />
+                                    {item}
+                                </div>
+                            )
+                        })}
+                        <div className="dialog--action">
                             <Button appearance={Button.appearances.primary}>Apply</Button>
                         </div>
                     </div>
@@ -60,4 +65,4 @@ function useOutsideClick(ref, callback){
     })
 }
 
-export default Dropdown
+export default Dialog

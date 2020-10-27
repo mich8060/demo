@@ -36,12 +36,12 @@ a {
 }
 
 .app {
-    min-width:1600px;
+	margin:0 auto;
+    max-width:1600px;
     padding-top:60px;
 	
 	&--header {
 		left:0;
-        min-width:1600px;
 		position:fixed;
 		right:0;
 		top:0;

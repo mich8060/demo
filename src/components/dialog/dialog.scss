@@ -1,10 +1,10 @@
 @import "~@pluralsight/ps-design-system-core/dist/index.module.scss";
 
-.dropdown {
+.dialog {
     background:#34383F;
     border:solid 1px #34383F;;
     border-radius:2px;
-    color:$ps-colors-text-icon-high-on-dark;
+    color:$ps-colors-text-icon-low-on-dark;
     cursor: pointer;
     display:inline-flex;
     font-weight:600;
@@ -17,11 +17,22 @@
     &--action {
         border-top:solid 1px $ps-colors-border-high-on-light;
         margin-top:12px;
-        padding-top:24px;
+        padding-top:12px;
     }
 
     &--arrow {
         margin-left:auto;
+    }
+
+    &--item {
+        align-items: center;
+        display:flex;
+        text-transform: capitalize;
+        padding: 2px 0;
+
+        input {
+            margin-right:8px;
+        }
     }
 
     &--menu {
