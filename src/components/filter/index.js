@@ -48,12 +48,17 @@ function Filter(props){
                 <Theme name={Theme.names.dark}>
                     <Dropdown 
                         className="filter--dropdown"
-                        placeholder="Relevance"
+                        placeholder="Newest"
                         appearance={Dropdown.appearances.subtle}
                         menu={
                             <React.Fragment>
-                                <Dropdown.Item>Relevance</Dropdown.Item>
+                                <Dropdown.Item>Author</Dropdown.Item>
+                                <Dropdown.Item>Completed</Dropdown.Item>
+                                <Dropdown.Item>Incompleted</Dropdown.Item>
                                 <Dropdown.Item>Newest</Dropdown.Item>
+                                <Dropdown.Item>Oldest</Dropdown.Item>
+                                <Dropdown.Item>Title A-Z</Dropdown.Item>
+                                <Dropdown.Item>Title Z-A</Dropdown.Item>
                             </React.Fragment>
                         }
                     />
