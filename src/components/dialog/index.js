@@ -10,7 +10,7 @@ import Checkbox from '../checkbox'
 function Dialog(props){
 
     const ref = useRef()
-    const [active, setActive] = useState(true)
+    const [active, setActive] = useState(false)
 
     useOutsideClick(ref, () => {
         if(active) setActive(false)
