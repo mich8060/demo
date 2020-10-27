@@ -6,7 +6,7 @@ import Button from '@pluralsight/ps-design-system-button'
 import Icon from '@pluralsight/ps-design-system-icon'
 import { IqIcon, BookmarkFillIcon, LabsIcon, InteractiveIcon, MoreIcon, PathIcon, VideoIcon, ProjectIcon,  } from '@pluralsight/ps-design-system-icon'
 
-import Dropdown from '../dropdown/'
+import Dropdown from '../dialog'
 import DSDropdown from '@pluralsight/ps-design-system-dropdown'
 import Theme from '@pluralsight/ps-design-system-theme'
 

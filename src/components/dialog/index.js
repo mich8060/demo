@@ -10,7 +10,7 @@ import Checkbox from '../checkbox'
 function Dialog(props){
 
     const ref = useRef()
-    const [active, setActive] = useState(true)
+    const [active, setActive] = useState(false)
 
     useOutsideClick(ref, () => {
         if(active) setActive(false)
@@ -22,30 +22,25 @@ function Dialog(props){
             onClick={() => { setActive(true) }}
             ref={ref}
         >
-            Content type
-            <CaretDownIcon color={CaretDownIcon.colors.textIconLowOnDark} className="dialog--arrow" />
-            {active && (
-                <Theme name={Theme.names.light}>
-                    <div className="dialog--menu">
-                        {props.data.map((item,index) => {
-                            if(item === "skilliq"){
-                                item = "Skill IQ"
-                            }else if(item === "interactive"){
-                                item = "Interactive Courses"
-                            }
-                            return(
-                                <div className="dialog--item">
-                                    <input type="checkbox" />
-                                    {item}
-                                </div>
-                            )
-                        })}
-                        <div className="dialog--action">
-                            <Button appearance={Button.appearances.primary}>Apply</Button>
+            <div className="dialog--menu">
+                <div className="dialog--item border">
+                    <input type="checkbox" checked="true" />
+                    All
+                </div>
+                {props.data.map((item,index) => {
+                    if(item === "skilliq"){
+                        item = "Skill IQ"
+                    }else if(item === "interactive"){
+                        item = "Interactive Courses"
+                    }
+                    return(
+                        <div className="dialog--item">
+                            <input type="checkbox" checked="true" />
+                            {item}
                         </div>
-                    </div>
-                </Theme>
-            )}
+                    )
+                })}
+            </div>
         </div>
     )
 }

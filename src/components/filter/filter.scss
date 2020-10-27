@@ -2,13 +2,20 @@
 @import "~@pluralsight/ps-design-system-core/dist/index.module.scss";
 
 .filter {
+    background:$ps-colors-background-dark3;
+    width:288px;
 
-    &--container {
-        border-bottom:solid 1px $ps-colors-border-low-on-dark;
-        margin: 0 auto;
-        max-width:calc(1600px - 96px);
-        padding:24px 0;
-        width:100%;
+    &--header {
+        border-bottom:solid 2px $ps-colors-background-dark1;
+        border-top:solid 2px $ps-colors-background-dark1;
+        font-size:$ps-type-font-size-xsmall;
+        font-weight:700;
+        padding:12px 24px;
+        text-transform:uppercase;
+    }
+
+    &--group {
+        padding:12px 24px 24px;
     }
 }
 

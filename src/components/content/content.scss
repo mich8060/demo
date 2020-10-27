@@ -1,11 +1,8 @@
 @import "~@pluralsight/ps-design-system-core/dist/index.module.scss";
 
 .content {
-    &--container {
-        margin:0 auto;
-        max-width:1600px;
-        padding:0 48px;
-    }
+    flex: 1;
+    padding-right:48px;
 
     &--item {
         strong {
@@ -31,7 +28,6 @@
 .filter {
     color:$ps-colors-text-icon-low-on-dark;
     font-weight:600;
-    padding:8px 0;
     margin-bottom:16px;
 
     &--dropdown {

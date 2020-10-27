@@ -43,8 +43,10 @@ function App() {
 			</section>
 			<section className="app--body">
 				<Head setSearch={setSearch} />
-				<Filter data={query} content={content} level={level} />
-				<Content data={query} />
+				<div class="app--aside">
+					<Content data={query} />
+					<Filter data={query} content={content} level={level} />
+				</div>
 			</section>
 		</div>
 	);

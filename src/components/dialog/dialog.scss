@@ -1,8 +1,6 @@
 @import "~@pluralsight/ps-design-system-core/dist/index.module.scss";
 
 .dialog {
-    background:#34383F;
-    border:solid 1px #34383F;;
     border-radius:2px;
     color:$ps-colors-text-icon-low-on-dark;
     cursor: pointer;
@@ -10,7 +8,6 @@
     font-weight:600;
     margin-right:12px;
     min-width:180px;
-    padding:7px 4px 6px 8px;
     position: relative;
     z-index:99;
 
@@ -20,29 +17,21 @@
         padding-top:12px;
     }
 
-    &--arrow {
-        margin-left:auto;
-    }
-
     &--item {
         align-items: center;
         display:flex;
         text-transform: capitalize;
-        padding: 2px 0;
+        padding: 4px 0;
+        width:240px;
+
+        &.border {
+            border-bottom:solid 2px $ps-colors-background-dark1;
+            padding-bottom:8px;
+            margin-bottom:8px;
+        }
 
         input {
-            margin-right:8px;
+            margin-right:12px;
         }
-    }
-
-    &--menu {
-        background:#fff;
-        border-radius:2px;
-        color:$ps-colors-text-icon-high-on-light;
-        left:0;
-        min-width:260px;
-        padding:12px;
-        position:absolute;
-        top:40px;
     }
 }

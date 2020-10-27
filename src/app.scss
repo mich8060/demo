@@ -38,7 +38,13 @@ a {
 .app {
 	margin:0 auto;
     max-width:1600px;
-    padding-top:60px;
+	padding-top:60px;
+	
+	&--aside {
+		align-items: flex-start;
+		display:flex;
+		padding:24px 48px;
+	}
 	
 	&--header {
 		left:0;
